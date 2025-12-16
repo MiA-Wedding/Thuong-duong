@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Thiệp mời cưới Tuấn Dương & Ninh Thương</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="preload">
+
+  <div id="effect-layer" aria-hidden="true"></div>
+
+  <!-- Music -->
+  <audio id="bg-music" src="" loop playsinline></audio>
+  <button id="music-toggle" class="music-toggle" aria-label="Bật/Tắt nhạc">🔈</button>
+  
+<div class="wishbox-container">
+
+
+
+<div id="wishbox-wrapper">
+
+  <div id="wish-list">
+    <div id="wish-inner"></div>
+  </div>
+
+  <button id="open-popup">Gửi lời chúc . . .</button>
+</div>
+
+<!-- POPUP NHẬP -->
+<div id="popup" class="popup">
+  <div class="popup-box">
+    <h3>Gửi lời chúc</h3>
+
+    <input id="in-name" type="text" placeholder="Tên của bạn">
+
+    <select id="in-confirm">
+      <option value="Có">Sẽ tham dự</option>
+      <option value="Không">Không tham dự</option>
+      <option value="Chưa chắc">Chưa chắc chắn</option>
+    </select>
+
+    <textarea id="in-msg" rows="3" placeholder="Lời chúc..."></textarea>
+
+    <button id="send-wish" class="btn-main">Gửi</button>
+  </div>
+</div>
+
+<!-- POPUP CẢM ƠN -->
+<div id="popup-thanks" class="popup">
+  <div class="popup-box">
+    <h3>Cảm ơn bạn nhiều nhó . . .</h3>
+    <button id="ok-btn" class="btn-main">OK</button>
+  </div>
+</div>
+
+<script src="wishbox.js"></script>
+<link rel="stylesheet" href="wishbox.css">
+
+  <!-- HERO -->
+  <header id="hero" class="hero section">
+    <div id="doors" class="doors" aria-hidden="true">
+      <img id="door-left" src="" alt="" class="door door-left">
+      <img id="door-right" src="" alt="" class="door door-right">
+    </div>
+
+    <div class="hero-bg" id="hero-bg"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content container" id="hero-content">
+      <h1 class="save-date">Save The Date</h1>
+      <h1 class="couple" id="couple-names"></h1>
+      <p class="date" id="wedding-date">—</p>
+      <div class="hero-single ph reveal" id="hero-photo-wrap">
+        <img id="hero-photo" src="" alt="Cặp đôi">
+      </div>
+      <a href="#invitation" class="btn btn-primary mt-16">💌 Xem thư mời</a>
+    </div>
+  </header>
+
+  <!-- INVITATION -->
+  <section id="invitation" class="section section-ink invitation">
+    <div class="container narrow">
+      <div class="invite-center reveal">
+        <h2 class="section-title">Thư mời</h2>
+        <h3 class="sub-title">Tham dự lễ cưới của chúng tôi</h3>
+        <h2 class="names" id="invite-names"></h2>
+      </div>
+
+      <div class="invite-row">
+        <!-- Nhà trai -->
+        <div class="invite-side invite-left reveal-left">
+          <img class="avatar-large" id="invite-left-img" src="" alt="Nhà trai">
+          <h3 id="left-name"></h3>
+          <div class="parents">
+            <p id="left-parents"></p>
+            <p id="left-address" class="muted small"></p>
+          </div>
+        </div>
+
+        <!-- Nhà gái -->
+        <div class="invite-side invite-right reveal-right">
+          <img class="avatar-large" id="invite-right-img" src="" alt="Nhà gái">
+          <h3 id="right-name"></h3>
+          <div class="parents">
+            <p id="right-parents"></p>
+            <p id="right-address" class="muted small"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- calendar + countdown above map -->
+<div class="invite-info reveal">
+  <p class="ceremony-text white">Trân trọng kính mời quý khách đến tham dự và chung vui</p>
+  <p class="ceremony-text yellow"> cùng chúng tôi</p>
+  <p class="ceremony-text white">🤵👰</p>
+
+  <p class="invite-note">
+    Hôn lễ được tổ chức vào lúc <span id="wedding-time"></span>
+  </p>
+  <div id="date-calendar" class="date-calendar"></div>
+  <div id="countdown-box" class="countdown" aria-live="polite"></div>
+  <p class="invite-thanks">
+    “Sự hiện diện của Quý khách là niềm vinh hạnh lớn lao trong ngày hạnh phúc của chúng tôi.”
+  </p>
+</div>
+
+      <!-- map embed -->
+      <div class="map-wrap reveal" id="map-wrap">
+        <div class="map-box">
+          <iframe id="map-iframe" src="" width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          <a id="map-open-link" class="map-overlay" href="#" target="_blank" rel="noopener"></a>
+        </div>
+        <p class="map-address">📍 Tại  Ninh Xá Thượng-Vũ Dương-Ninh Bình </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="section">
+    <div class="container">
+      <h2 class="section-title">Album Ảnh Cưới</h2>
+      <p class="muted mb-20">Lưu giữ những khoảnh khắc yêu thương</p>
+      <div class="grid gallery-grid" id="gallery-grid"></div>
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section id="video" class="section section-ink">
+    <div class="container narrow">
+      <h2 class="section-title">Cùng xem video cưới của chúng mình nhé!</h2>
+      <div class="card">
+        <div class="media-16x9">
+          <iframe id="wedding-video" title="Wedding Video" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QR -->
+  <section id="qrs" class="section">
+    <div class="container narrow">
+      <h2 class="section-title"> “Lời chúc phúc của Quý khách là món quà vô giá trong ngày trọng đại của vợ chồng mình.”💖</h2>
+      <div class="grid qr-grid" id="qr-grid"></div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <dialog id="lightbox">
+    <button id="lightbox-prev" class="nav-btn" aria-label="Ảnh trước">◀</button>
+    <img id="lightbox-img" alt="Preview" />
+    <button id="lightbox-next" class="nav-btn" aria-label="Ảnh sau">▶</button>
+    <button id="lightbox-close" class="btn btn-light btn-sm" aria-label="Đóng">Đóng</button>
+  </dialog>
+
+  <!-- FOOTER -->
+  <footer class="footer-thanks section-ink">
+    <div class="container narrow">
+      <h2 class="thanks-title">✨ LỜI CẢM ƠN ✨</h2>
+      <p class="thanks-text">
+        “Vợ chồng mình vô cùng hạnh phúc khi được chia sẻ khoảnh khắc thiêng liêng này cùng gia đình, 
+        bạn bè và những người thân yêu. Sự hiện diện của Quý khách chính là niềm vinh hạnh, 
+        là món quà vô giá đối với chúng mình.” 
+      </p>
+      <p class="thanks-sign">Xin chân thành cảm ơn !</p>
+    </div>
+  </footer>
+
+  <!-- Floating Menu -->
+  <div id="fab" class="fab" aria-label="Menu nhanh">
+    <button class="fab-main" aria-label="Mở menu">☰</button>
+    <div class="fab-list" aria-hidden="true">
+      <button class="fab-item" data-target="#invitation">💌 Thư mời</button>
+      <button class="fab-item" data-target="#date-calendar">📅 Lịch & Countdown</button>
+      <button class="fab-item" data-target="#map-wrap">📌 Bản đồ</button>
+      <button class="fab-item" data-target="#gallery">📸 Album</button>
+      <button class="fab-item" data-target="#qrs">💝 Mừng cưới</button>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
