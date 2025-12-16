@@ -7,7 +7,7 @@ const WEDDING_CONFIG = {
   groomName: " Tuấn Dương  ",
   brideName: "Ninh Thương",
 
-  weddingDate: "01/03/2026  15:30:00",
+  weddingDate: "01/03/2026  09:00:00",
   location: "  Ninh Xá Thượng-Vũ Dương-Ninh Bình ",
 
   // link mở ngoài (mở app Google Maps trên điện thoại)
@@ -49,7 +49,7 @@ const WEDDING_CONFIG = {
     groomSide: {
       avatar: "assets/g1.jpg",
       name: "Tuấn Dương ",
-      parents: "Bố: Nguyễn Quang Tuấn<br>Mẹ: ĐLê Thị Vân",
+      parents: "Bố: Nguyễn Quang Tuấn<br>Mẹ: Lê Thị Vân",
       address: "Địa chỉ: TDP Xuân Hoà - Phường Tự Lạn - Bắc Ninh	"
     },
     brideSide: {
